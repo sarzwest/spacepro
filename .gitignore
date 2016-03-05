@@ -23,5 +23,5 @@ buildNumber.properties
 **/.project
 #Eclipse END
 #Git BEGIN
-**/.gitignore
+#**/.gitignore
 #Git END

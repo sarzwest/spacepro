@@ -7,3 +7,21 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+#General BEGIN
+*~
+#General END
+#JIdea BEGIN
+**/.idea
+**.iml
+#JIdea END
+#Maven BEGIN
+**/target
+#Maven END
+#Eclipse BEGIN
+**/.settings
+**/.classpath
+**/.project
+#Eclipse END
+#Git BEGIN
+**/.gitignore
+#Git END

@@ -1,0 +1,97 @@
+<!doctype html>
+<html ng-app="spaceProApp" ng-controller="TopicsCtrl">
+<head>
+    <meta charset="utf-8">
+    <title data-ng-bind-template="SpacePro: {{query}}">SpacePro:</title>
+    <script src="js/angular.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body>
+<h1>SpacePro</h1>
+<div id="anonymous" ng-if=!loggedIn>
+
+    <form>
+    <fieldset>
+    <legend>Registration</legend>
+	<input type="text" ng-model="userReg.loginName"/>
+	<input type="password" ng-model="userReg.password"/>
+	<input type="submit" value="Register" ng-click="register(userReg)"/>
+    </fieldset>
+    </form>
+
+    <form>
+    <fieldset>
+    <legend>Login</legend>
+	<input type="text" ng-model="user.loginName"/>
+	<input type="password" ng-model="user.password"/>
+	<input type="submit" value="Login" ng-click="login(user)"/>
+    </fieldset>
+    </form>
+</div>
+
+<div id="loggedIn" ng-if="loggedIn">
+<fieldset>
+<legend>Logout</legend>
+    <input type="button" value="Logout" ng-click="logout()"/>
+</fieldset>
+
+<div id="list" ng-if="view == 'list'">
+
+<fieldset>
+<legend>Topic filtering</legend>
+    Search: <input ng-model="query">
+    Sort by:
+    <select ng-model="orderProp">
+	<option value="header">Header</option>
+	<option value="loginName">Author</option>
+    </select>
+</fieldset>
+
+<fieldset>
+<legend>Topics</legend>
+    <ul>
+        <li ng-repeat="topic in topics | filter:query | orderBy:orderProp">
+            <a href="#/topics/{{topic.id}}" ng-click="detail(topic)">{{topic.header}}</a> <small>by {{topic.loginName}}</small>
+        </li>
+    </ul>
+</fieldset>
+    
+</div>
+
+<div id="detail" ng-if="view == 'detail'">
+<input type="button" value="Back to topics" ng-click="getTopicsList()"/>
+
+<fieldset>
+<legend>Topic details</legend>
+<div>
+    <h2>{{topic.header}}</h2>
+    <p>{{topic.content}}</p>
+    <small>{{topic.loginName}}</small>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Comments</legend>
+    <ul>
+        <li ng-repeat="comment in comments | orderBy:creationTime" class="thumbnail">
+	    
+            <div>
+		<p>{{comment.content}}</p>
+		<small>by {{comment.author}}</small>
+	    </div>
+	    <hr>
+        </li>
+    </ul>
+</fieldset>
+
+<fieldset>
+<legend>Comment this topic</legend>
+     <textarea rows="4" cols="50" ng-model="newComment">
+    </textarea>
+    <input type="submit" value="Submit comment" ng-click="sendComment(newComment)"/>
+</fieldset>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+Aplikace byla vyvijena na serveru JBoss EAP 6.1
+
+Instalace
+
+- Vytvoreni data source na AS s nazvem java:jboss/datasources/spaceproDS
+
+- Sestaveni aplikace
+    mvn clean install
+    v cloudu se spousti s profilem openshift
+
+- Nakopirovani war souboru z spacepro-gui/target do deploy adresare AS
+
+- Aplikace bude dostupna na <host>:<port>/spacepro-gui-1.0-SNAPSHOT/
+    aplikace je nasazena v cloudu a je dostupna na http://spacepro-sarzwest.rhcloud.com/
+    protoze je na openshiftu pouzit program free, je aplikace po urcite dobe uspana. Pro
+    probuzeni staci prejit na jeji adresu a do par minut bude aplikace dostupna
+
+Requirements
+1. ano
+2. ano
+3. ano
+4. ano
+5. ne
+6. ano
+
+Bonus
+1. ano
+2. ano
+3. ne
+4. ano
+
+Technologies
+Java
+J2EE
+Angular JS
+MySQL
+a dalsi

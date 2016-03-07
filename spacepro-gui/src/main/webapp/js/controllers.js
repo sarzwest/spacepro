@@ -12,8 +12,8 @@ phonecatApp.controller('TopicsCtrl', function ($scope, $http) {
     $scope.newComment = "";
 
     $scope.orderProp = "header";
-    $scope.userReg = {"loginName": "sarzwest", "password": "popopo"};
-    $scope.user = {"loginName": "sarzwest", "password": "popopo"};
+    $scope.userReg = {"loginName": "", "password": ""};
+    $scope.user = {"loginName": "", "password": ""};
     $scope.register = function (user) {
         $http({
             "method": "POST",

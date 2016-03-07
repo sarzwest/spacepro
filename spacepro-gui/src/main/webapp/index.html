@@ -55,6 +55,15 @@
         </li>
     </ul>
 </fieldset>
+
+<fieldset>
+<legend>Create new topic</legend>
+    Header: <input type="text" ng-model="newTopic.header"/>
+    <div> <textarea rows="4" cols="50" ng-model="newTopic.content">
+    </textarea></div>
+    <input type="submit" value="Create new topic" ng-click="createTopic(newTopic)"/>
+</fieldset>
+
     
 </div>
 
@@ -67,7 +76,7 @@
     <h2>{{topic.header}}</h2>
     <p>{{topic.content}}</p>
     <small>{{topic.loginName}}</small>
-</div>
+    <div>
 </fieldset>
 
 <fieldset>

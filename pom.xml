@@ -25,9 +25,9 @@
 
 
     <scm>
-        <url>https://github.com/sarzwest/spacepro.git</url>
-        <connection>scm:git:https://github.com/sarzwest/spacepro.git</connection>
-        <developerConnection>scm:git:https://github.com/sarzwest/spacepro.git</developerConnection>
+        <url>ssh://github.com/sarzwest/spacepro.git</url>
+        <connection>scm:git:ssh://github.com/sarzwest/spacepro.git</connection>
+        <developerConnection>scm:git:ssh://github.com/sarzwest/spacepro.git</developerConnection>
     </scm>
     <build>
         <pluginManagement>

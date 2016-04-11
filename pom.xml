@@ -29,6 +29,12 @@
         <developerConnection>scm:git:ssh://github.com/sarzwest/spacepro.git</developerConnection>
       <tag>HEAD</tag>
   </scm>
+    <scm>
+        <url>ssh://56dac6902d5271e1870000e5@spacepro-sarzwest.rhcloud.com/~/git/spacepro.git</url>
+        <connection>scm:git:ssh://56dac6902d5271e1870000e5@spacepro-sarzwest.rhcloud.com/~/git/spacepro.git</connection>
+        <developerConnection>scm:git:ssh://56dac6902d5271e1870000e5@spacepro-sarzwest.rhcloud.com/~/git/spacepro.git</developerConnection>
+    </scm>
+
     <build>
         <pluginManagement>
             <plugins>

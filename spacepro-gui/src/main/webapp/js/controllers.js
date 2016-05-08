@@ -14,6 +14,19 @@ phonecatApp.controller('TopicsCtrl', function ($scope, $http) {
     $scope.orderProp = "header";
     $scope.userReg = {"loginName": "", "password": ""};
     $scope.user = {"loginName": "", "password": ""};
+
+    $scope.init = function(){
+        (function () {
+            var oldLog = console.log;
+            console.log = function(message){
+                window.alert(message);
+                oldLog.apply(console, arguments);
+            };
+        }) ();
+    };
+
+    angular.element(document).ready($scope.init());
+
     $scope.register = function (user) {
         $http({
             "method": "POST",

@@ -9,6 +9,10 @@
 
     <name>SpacePro project</name>
     <url>http://www.spacepro.org</url>
+    <!--
+    Releases the version and prepares snapshot
+    mvn - -batch-mode -Dtag=v1.3 release:prepare  -DreleaseVersion=1.3 -DdevelopmentVersion=1.4-SNAPSHOT
+    -->
 
     <properties>
 
@@ -202,6 +206,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <profiles>
         <profile>
             <!-- When built in OpenShift the 'openshift' profile will be used when
